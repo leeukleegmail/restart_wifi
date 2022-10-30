@@ -1,6 +1,6 @@
 import shutil
 import paramiko
-
+from os import path
 from env import *
 
 
@@ -10,7 +10,7 @@ def restart_wifi():
     else:
         path_to_file = "/Users/{}/.ssh/{}".format(i_am, file_name)
 
-    if not os.path.exists(file_name):
+    if not path.exists(file_name):
         shutil.copy(path_to_file, ".")
 
     ssh = paramiko.SSHClient()

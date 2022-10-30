@@ -3,6 +3,10 @@ from flask_cors import CORS
 
 from wifi_reset import restart_wifi
 
+from os import popen
+
+from env import host, ping_failed
+
 app = Flask(__name__)
 CORS(app)
 
@@ -14,8 +18,12 @@ def home():
 
 @app.route('/restart/', methods=['post', 'get'])
 def restart():
-    restart_wifi()
-    return "Restarted"
+    ping_response = popen("ping -c 1 {}".format(host)).read().strip()
+    if ping_failed in ping_response:
+        return "Ping test to IP Address {} failed".format(host)
+    else:
+        restart_wifi()
+        return "Restarted"
 
 
 if __name__ == '__main__':
