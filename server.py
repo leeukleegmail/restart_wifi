@@ -9,13 +9,13 @@ CORS(app)
 
 @app.route('/', methods=['post', 'get'])
 def home():
-    return "200"
+    return "Service Running"
 
 
 @app.route('/restart/', methods=['post', 'get'])
 def restart():
     restart_wifi()
-    return "200"
+    return "Restarted"
 
 
 if __name__ == '__main__':
