@@ -5,7 +5,7 @@ ENV CONTAINER_NAME $container_name
 
 WORKDIR /$CONTAINER_NAME
 
-RUN curl https://sh.rustup.rs -y -sSf | sh
+RUN curl https://sh.rustup.rs -sSf -y | sh
 
 RUN pip install --upgrade pip
 
