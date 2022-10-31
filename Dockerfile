@@ -12,7 +12,8 @@ RUN apk add --update \
     rust \
     libffi-dev \
     cargo \
-    openssl-dev
+    openssl-dev \
+    make
 
 
 #      build-base \
