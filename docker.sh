@@ -1,6 +1,8 @@
 CONTAINER_NAME="restart_wifi"
 CONTAINER_PORT="5001"
 
+export CONTAINER_NAME
+
 docker stop $CONTAINER_NAME
 docker rm $CONTAINER_NAME
 docker build --tag $CONTAINER_NAME .
