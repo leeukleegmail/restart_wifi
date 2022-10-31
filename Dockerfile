@@ -7,7 +7,9 @@ WORKDIR /$CONTAINER_NAME
 ENV PYTHONUNBUFFERED 1
 #
 RUN apk add --update \
-    gcc
+    gcc \
+    py-cffi \
+
 #      build-base \
 #      cairo \
 #      cairo-dev \
