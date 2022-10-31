@@ -41,9 +41,10 @@ RUN apk add --update \
 
 RUN /usr/local/bin/python -m pip install --upgrade pip
 
-RUN pip install cryptography
-
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+
+RUN pip install cryptography
+
 
 CMD [ "python3", "server.py"]
