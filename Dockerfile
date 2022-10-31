@@ -11,7 +11,9 @@ RUN apk add --update \
     py-cffi \
     rust \
     libffi-dev \
-    cargo
+    cargo \
+    openssl-dev
+
 
 #      build-base \
 #      cairo \
