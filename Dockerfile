@@ -38,9 +38,10 @@ RUN apk add --update \
 #      tk-dev \
 #      zlib-dev
 
-RUN pip install cryptography
 
-RUN pip install --upgrade pip
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
+RUN pip install cryptography
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
