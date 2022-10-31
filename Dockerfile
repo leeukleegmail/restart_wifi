@@ -8,7 +8,10 @@ ENV PYTHONUNBUFFERED 1
 #
 RUN apk add --update \
     gcc \
-    py-cffi
+    py-cffi \
+    rust \
+    libffi-dev
+
 #      build-base \
 #      cairo \
 #      cairo-dev \
