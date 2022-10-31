@@ -10,19 +10,18 @@ RUN apk add --update \
     gcc \
     py-cffi \
     rust \
-    libffi-dev
+    libffi-dev \
+    cargo
 
 #      build-base \
 #      cairo \
 #      cairo-dev \
 #      cargo \
 #      freetype-dev \
-#      gcc \
 #      gdk-pixbuf-dev \
 #      gettext \
 #      jpeg-dev \
 #      lcms2-dev \
-#      libffi-dev \
 #      musl-dev \
 #      openjpeg-dev \
 #      openssl-dev \
@@ -32,7 +31,6 @@ RUN apk add --update \
 #      postgresql-dev \
 #      py-cffi \
 #      python3-dev \
-#      rust \
 #      tcl-dev \
 #      tiff-dev \
 #      tk-dev \
