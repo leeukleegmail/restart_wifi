@@ -1,6 +1,6 @@
-FROM python:3.8-slim-buster
+FROM python:3.8
 
-WORKDIR /python-docker
+WORKDIR /restart_wifi
 
 COPY requirements.txt requirements.txt
 RUN /usr/local/bin/python -m pip install --upgrade pip
