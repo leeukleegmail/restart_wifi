@@ -5,7 +5,7 @@ ENV CONTAINER_NAME $container_name
 
 WORKDIR /$CONTAINER_NAME
 
-RUN curl https://sh.rustup.rs -sSf -y | sh
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
 RUN pip install --upgrade pip
 
