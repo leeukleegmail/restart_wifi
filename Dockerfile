@@ -1,12 +1,12 @@
-FROM python:3
+FROM python:3.12-rc-bullseye
 
 ARG container_name
 ENV CONTAINER_NAME $container_name
 
 WORKDIR /$CONTAINER_NAME
 
-COPY rustup-init.sh rustup-init.sh
-RUN rustup-init.sh
+RUN apk add gcc musl-dev python3-dev libffi-dev openssl-dev cargo
+
 
 RUN pip install --upgrade pip
 
