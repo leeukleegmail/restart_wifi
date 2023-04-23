@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_cors import CORS
 
-from wifi_reset import restart_wifi
+from ssh_commands import run_command_via_ssh
 
 from os import popen
 
-from env import host, ping_failed
+from env import *
 
 app = Flask(__name__)
 CORS(app)
@@ -22,7 +22,7 @@ def restart():
     if ping_failed in ping_response:
         return "Ping test to IP Address {} failed".format(host)
     else:
-        restart_wifi()
+        run_command_via_ssh(run_command_via_ssh(host, user, password, reboot_command))
         return "Restarted"
 
 

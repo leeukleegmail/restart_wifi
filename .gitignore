@@ -131,3 +131,5 @@ dmypy.json
 id_rsa.pub
 
 env.py
+git.sh
+.idea
